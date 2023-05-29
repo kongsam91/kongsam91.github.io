@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <h2>匯率轉換器</h2>
+    該金額對應到的美金<p id="us"></p>
+    該金額對應到的歐元<p id="eu"></p>
+    該金額對應到的日幣<p id="jp"></p>
+    該金額對應到的韓元<p id="kr"></p>
+    該金額對應到的澳幣<p id="ast"></p>
+    <button ></button>
+    <input value="你有多少台幣" id="moneyinput">
+    <button type="button" onclick="myfunction()">執行計算</button>
+    <button type="button" onclick="reset()">reset</button>
+    <script>
+        // function loadDoc(){
+        //     const xhttp = new XMLHttpRequest();
+        //     xhttp.onload = function(){
+        //         myfunction(this);
+        //     }
+        //     xhttp.open("GET","./rate.xml");
+        //     xhttp.send();
+        // }
+        // function myfunction(xml){
+        //     const xmlDOC = xml.responseXML;
+        //     const x = xmlDOC.getElementsByTagName("RATE");
+        //     test = x.getElementsByTagName("US")[0].childNodes[0].nodeValue
+        //     console.log(test);
+        // }
+        
+
+
+        // 第四小題
+        function reset(){;
+            document.getElementById("us").innerHTML = "";
+            document.getElementById("eu").innerHTML = "";
+            document.getElementById("jp").innerHTML = "";
+            document.getElementById("kr").innerHTML = "";
+            document.getElementById("ast").innerHTML = "";
+            document.getElementById("moneyinput").value = "你有多少台幣";
+        }
+        //第一小題 
+        function myfunction(){
+            var us =30.965;
+            var eu =33.45;
+            var jp =0.2219;
+            var kr =0.02534;
+            var ast =20.44;
+            var yourmoney = document.getElementById("moneyinput").value;
+            console.log(yourmoney*us);
+            // 第五小題
+            if( yourmoney*us == null || name == ""  ) {
+                alert( "此為無效的輸入，幫您重製輸入");
+                reset();
+            }else{
+                document.getElementById("us").innerHTML = yourmoney*us ;
+                document.getElementById("eu").innerHTML = yourmoney*eu ;
+                document.getElementById("jp").innerHTML = yourmoney*jp ;
+                document.getElementById("kr").innerHTML = yourmoney*kr ;
+                document.getElementById("ast").innerHTML = yourmoney*ast ;
+            }
+
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>

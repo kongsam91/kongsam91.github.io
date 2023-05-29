@@ -1,0 +1,11 @@
+/* 第三小題 */
+#us {
+    text-align: center;
+    color: blue;
+    font-family:"Times New Roman";
+    background-color: aliceblue;
+    opacity:0.5;
+}
+body{
+    background-color: aliceblue;
+}
