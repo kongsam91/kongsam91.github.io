@@ -55,7 +55,7 @@
             var yourmoney = document.getElementById("moneyinput").value;
             console.log(yourmoney*us);
             // 第五小題
-            if( yourmoney*us == null || name == ""  ) {
+            if( isNaN(yourmoney*us)) {
                 alert( "此為無效的輸入，幫您重製輸入");
                 reset();
             }else{
